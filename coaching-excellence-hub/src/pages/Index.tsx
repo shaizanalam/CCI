@@ -1,0 +1,29 @@
+import TopBar from "@/components/TopBar";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Features from "@/components/Features";
+import Courses from "@/components/Courses";
+import Stats from "@/components/Stats";
+import Campus from "@/components/Campus";
+import MapSection from "@/components/MapSection";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import Chatbot from "@/components/Chatbot";
+
+const Index = () => (
+  <>
+    <TopBar />
+    <Header />
+    <Hero />
+    <Features />
+    <Courses />
+    <Stats />
+    <Campus />
+    <MapSection />
+    <Contact />
+    <Footer />
+    <Chatbot />
+  </>
+);
+
+export default Index;
