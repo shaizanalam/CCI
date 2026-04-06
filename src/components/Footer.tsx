@@ -31,10 +31,10 @@ const Footer = () => {
               <img src={logo} alt="Logo" className="w-12 h-12 object-contain" />
               <div>
                 <h3 className="font-heading text-base font-bold text-primary-foreground leading-tight">
-                  Chhattisgarh Coaching Centre
+                  Chhattisgarh Coaching Institute
                 </h3>
                 <span className="text-gold text-xs font-medium tracking-wide uppercase">
-                  Excellence in Education
+                  Art  of making Genius
                 </span>
               </div>
             </div>

@@ -14,7 +14,7 @@ const contactItems = [
     icon: Phone,
     title: "Phone Number",
     content: "",
-    link: { href: "tel:+919131860077", label: "+91 91318 60077" },
+    link: { href: "tel:+919131856900", label: "+91 91318 60077" },
   },
   {
     icon: Mail,
@@ -38,7 +38,7 @@ const Contact = () => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
 
-    const whatsappNumber = "919109037737"; // your WhatsApp number
+    const whatsappNumber = "S9131856900"; // your WhatsApp number
     const whatsappMessage = `New Inquiry:\nName: ${form.name || "-"}\nPhone: ${form.phone || "-"}\nEmail: ${form.email || "-"}\nCourse: ${form.course || "-"}\nMessage: ${form.message || "-"}`;
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 

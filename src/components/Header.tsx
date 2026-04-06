@@ -43,10 +43,10 @@ const Header = () => {
           />
           <div>
             <h1 className="font-heading text-lg sm:text-xl font-bold text-primary leading-tight">
-              Chhattisgarh Coaching Centre
+              Chhattisgarh Coaching Institute
             </h1>
             <p className="text-xs text-gold font-medium tracking-wide uppercase -mt-0.5">
-              Excellence in Education
+              Art  of  making Genius
             </p>
           </div>
         </a>
