@@ -42,7 +42,7 @@ const Courses = () => {
   };
 
   return (
-    <section id="courses" className="py-24 bg-background">
+    <section id="courses" className="py-12 sm:py-16 md:py-24 bg-background">
       <div className="section-container">
         <div className="section-tag">Our Programmes</div>
         <h2 className="section-title">Courses We Offer</h2>
@@ -50,7 +50,7 @@ const Courses = () => {
           From foundational school support to advanced competitive exam coaching — we cover it all.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
           {courses.map((course, i) => (
             <motion.div
               key={course.title}
@@ -62,19 +62,19 @@ const Courses = () => {
               style={{ boxShadow: "var(--shadow-sm)" }}
             >
               {/* Card header with gradient */}
-              <div className={`h-[200px] bg-gradient-to-br ${course.gradient} flex items-center justify-center relative overflow-hidden`}>
-                <course.icon className="w-16 h-16 text-primary-foreground/30" />
-                <span className="absolute top-4 left-4 bg-gold text-primary-foreground text-xs font-bold px-3 py-1 rounded-full tracking-wide">
+              <div className={`h-[120px] sm:h-[160px] md:h-[200px] bg-gradient-to-br ${course.gradient} flex items-center justify-center relative overflow-hidden`}>
+                <course.icon className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 text-primary-foreground/30" />
+                <span className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-gold text-primary-foreground text-xs font-bold px-2 py-0.5 sm:px-3 sm:py-1 rounded-full tracking-wide">
                   {course.label}
                 </span>
               </div>
 
               {/* Card body */}
-              <div className="p-6">
-                <h3 className="font-heading text-xl font-bold text-primary mb-2">{course.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">{course.description}</p>
+              <div className="p-3 sm:p-4 md:p-6">
+                <h3 className="font-heading text-lg sm:text-xl font-bold text-primary mb-1 sm:mb-2">{course.title}</h3>
+                <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed mb-2 sm:mb-4 line-clamp-2 sm:line-clamp-none">{course.description}</p>
 
-                <div className="flex flex-wrap gap-1.5 mb-5">
+                <div className="flex flex-wrap gap-1 sm:gap-1.5 mb-3 sm:mb-5">
                   {course.tags.map((tag) => (
                     <span key={tag} className="bg-primary/[0.06] text-primary text-xs font-semibold px-2.5 py-1 rounded-md">
                       {tag}
@@ -83,7 +83,10 @@ const Courses = () => {
                 </div>
 
                 <button
-                  onClick={() => scrollTo("#contact")}
+                  onClick={() => {
+                    sessionStorage.setItem("selectedCourse", course.title);
+                    scrollTo("#contact");
+                  }}
                   className="inline-flex items-center gap-1.5 text-gold font-semibold text-sm group/link hover:text-primary transition-colors"
                 >
                   Enroll Now

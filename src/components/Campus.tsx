@@ -13,7 +13,7 @@ const facilities = [
 ];
 
 const Campus = () => (
-  <section id="campus" className="py-24 bg-cream">
+  <section id="campus" className="py-12 sm:py-16 md:py-24 bg-cream">
     <div className="section-container">
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         {/* Images */}

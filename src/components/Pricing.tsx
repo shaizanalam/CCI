@@ -93,7 +93,7 @@ const pricingPlans = [
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="py-24 bg-background">
+    <section id="pricing" className="py-12 sm:py-16 md:py-24 bg-background">
       <div className="section-container">
         <div className="section-tag">Affordable Excellence</div>
         <h2 className="section-title">Fee Structure</h2>
@@ -101,13 +101,13 @@ const Pricing = () => {
           Transparent pricing for quality education across all classes and streams
         </p>
 
-        <div className="space-y-16">
+        <div className="space-y-8 md:space-y-16">
           {pricingPlans.map((planGroup, groupIndex) => (
             <div key={planGroup.category}>
               <h3 className="text-2xl font-bold text-primary mb-8 text-center">
                 {planGroup.category}
               </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 xl:gap-8">
                 {planGroup.plans.map((plan, planIndex) => (
                   <motion.div
                     key={plan.title}
@@ -137,21 +137,22 @@ const Pricing = () => {
                       </div>
                     )}
 
-                    <div className={`p-6 ${plan.popular ? "pt-14" : ""}`}>
-                      <h4 className="font-heading text-xl font-bold text-primary mb-2">
+                    <div className={`p-3 sm:p-4 md:p-6 ${plan.popular ? "pt-10 sm:pt-12 md:pt-14" : ""}`}>
+                      <h4 className="font-heading text-lg sm:text-xl font-bold text-primary mb-1 sm:mb-2">
                         {plan.title}
                       </h4>
 
-                      <div className="mb-6">
-                        <span className="text-4xl font-bold text-gold">{plan.price}</span>
-                        <span className="text-muted-foreground text-sm ml-2">{plan.period}</span>
+                      <div className="mb-4 sm:mb-6">
+                        <span className="text-3xl sm:text-4xl font-bold text-gold">{plan.price}</span>
+                        <span className="text-muted-foreground text-xs sm:text-sm ml-2">{plan.period}</span>
                       </div>
 
                       <button
-                        onClick={() =>
-                          document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })
-                        }
-                        className={`w-full py-3 px-4 rounded-xl font-semibold text-sm transition-all duration-300 mb-6 ${
+                        onClick={() => {
+                          sessionStorage.setItem("selectedCourse", plan.title);
+                          document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                        className={`w-full py-2 sm:py-3 px-3 sm:px-4 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-300 mb-4 sm:mb-6 ${
                           plan.popular
                             ? "bg-gold text-primary-foreground hover:bg-gold/90"
                             : "bg-primary/10 text-primary hover:bg-primary/20"

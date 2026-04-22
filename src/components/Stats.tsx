@@ -39,7 +39,7 @@ const Counter = ({ target, suffix }: { target: number; suffix: string }) => {
 
 const Stats = () => (
   <section
-    className="relative py-20 overflow-hidden"
+    className="relative py-12 sm:py-16 md:py-20 overflow-hidden"
     style={{
       background: "linear-gradient(135deg, hsl(215 65% 16%) 0%, hsl(215 50% 26%) 100%)",
     }}

@@ -6,10 +6,8 @@ import Courses from "@/components/Courses";
 import Pricing from "@/components/Pricing";
 import Stats from "@/components/Stats";
 import Campus from "@/components/Campus";
-import MapSection from "@/components/MapSection";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import Chatbot from "@/components/Chatbot";
 
 const Index = () => (
   <>
@@ -21,10 +19,8 @@ const Index = () => (
     <Pricing />
     <Stats />
     <Campus />
-    <MapSection />
     <Contact />
     <Footer />
-    <Chatbot />
   </>
 );
 

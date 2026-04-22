@@ -7,6 +7,7 @@ const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Why Us", href: "#features" },
   { label: "Courses", href: "#courses" },
+  { label: "Fee Structure", href: "#pricing" },
   { label: "Campus", href: "#campus" },
   { label: "Contact", href: "#contact" },
 ];
@@ -63,7 +64,10 @@ const Header = () => {
             </button>
           ))}
           <button
-            onClick={() => handleClick("#contact")}
+            onClick={() => {
+              sessionStorage.removeItem("selectedCourse");
+              handleClick("#contact");
+            }}
             className="ml-2 bg-primary text-primary-foreground px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-navy-light transition-colors shadow-md hover:shadow-lg hover:-translate-y-0.5 duration-200"
           >
             Enroll Now
@@ -96,7 +100,10 @@ const Header = () => {
                 </button>
               ))}
               <button
-                onClick={() => handleClick("#contact")}
+                onClick={() => {
+                  sessionStorage.removeItem("selectedCourse");
+                  handleClick("#contact");
+                }}
                 className="bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold mt-3"
               >
                 Enroll Now

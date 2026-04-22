@@ -25,7 +25,7 @@ const features = [
   {
     icon: Clock,
     title: "Flexible Batch Timings",
-    description: "Morning (7–11 AM), Afternoon (12–4 PM), and Evening (4–8 PM) batches designed to suit every student's schedule.",
+    description: "Morning (7–11 AM), Afternoon (2–4 PM), and Evening (4–9 PM) batches designed to suit every student's schedule.",
   },
   {
     icon: Wifi,
@@ -35,7 +35,7 @@ const features = [
 ];
 
 const Features = () => (
-  <section id="features" className="py-24 bg-cream">
+  <section id="features" className="py-12 sm:py-16 md:py-24 bg-cream">
     <div className="section-container">
       <div className="section-tag">Why Choose Us</div>
       <h2 className="section-title">Built for Student Success</h2>
@@ -43,7 +43,7 @@ const Features = () => (
         We don't just teach — we mentor, monitor, and motivate every student to reach their full potential.
       </p>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
         {features.map((f, i) => (
           <motion.div
             key={f.title}
@@ -51,17 +51,17 @@ const Features = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.08, duration: 0.5 }}
-            className="bg-background rounded-2xl p-7 border border-border/50 group hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden"
+            className="bg-background rounded-2xl p-4 sm:p-5 md:p-7 border border-border/50 group hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden"
             style={{ boxShadow: "var(--shadow-sm)" }}
           >
             {/* Top gradient bar on hover */}
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-gold scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300" />
 
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-navy-light flex items-center justify-center mb-5 shadow-md">
-              <f.icon className="w-6 h-6 text-primary-foreground" />
+            <div className="w-10 sm:w-12 md:w-14 h-10 sm:h-12 md:h-14 rounded-2xl bg-gradient-to-br from-primary to-navy-light flex items-center justify-center mb-3 sm:mb-4 md:mb-5 shadow-md">
+              <f.icon className="w-5 sm:w-6 h-5 sm:h-6 text-primary-foreground" />
             </div>
-            <h3 className="font-heading text-xl font-bold text-primary mb-2">{f.title}</h3>
-            <p className="text-muted-foreground text-sm leading-relaxed">{f.description}</p>
+            <h3 className="font-heading text-lg sm:text-xl font-bold text-primary mb-1 sm:mb-2">{f.title}</h3>
+            <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed line-clamp-3 sm:line-clamp-none">{f.description}</p>
           </motion.div>
         ))}
       </div>

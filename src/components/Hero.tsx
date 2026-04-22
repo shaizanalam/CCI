@@ -40,7 +40,7 @@ const Hero = () => {
       <div className="absolute -top-24 -right-24 w-[500px] h-[500px] rounded-full bg-gold/15 blur-[80px]" />
       <div className="absolute -bottom-12 left-[10%] w-72 h-72 rounded-full bg-green/15 blur-[80px]" />
 
-      <div className="section-container relative z-10 w-full grid lg:grid-cols-2 gap-16 items-center py-16">
+      <div className="section-container relative z-10 w-full grid lg:grid-cols-2 gap-8 md:gap-16 items-center py-8 sm:py-12 md:py-16">
         {/* Left content */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
