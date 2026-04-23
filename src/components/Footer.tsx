@@ -118,7 +118,7 @@ const Footer = () => {
         </div>
 
         <div className="text-center py-5 text-primary-foreground/30 text-xs">
-          © 2026 Chhattisgarh Coaching Centre. All Rights Reserved.
+          © 2026 Chhattisgarh Coaching Centre. All Rights Reserved. | Powered by Shaizan Alam
         </div>
       </div>
     </footer>
