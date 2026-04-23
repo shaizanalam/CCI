@@ -37,10 +37,10 @@ const Hero = () => {
       />
 
       {/* Glowing orbs */}
-      <div className="absolute -top-24 -right-24 w-[500px] h-[500px] rounded-full bg-gold/15 blur-[80px]" />
-      <div className="absolute -bottom-12 left-[10%] w-72 h-72 rounded-full bg-green/15 blur-[80px]" />
+      <div className="absolute -top-32 -right-32 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] rounded-full bg-gold/15 blur-[80px]" />
+      <div className="absolute -bottom-12 left-[5%] w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-full bg-green/15 blur-[80px]" />
 
-      <div className="section-container relative z-10 w-full grid lg:grid-cols-2 gap-8 md:gap-16 items-center py-8 sm:py-12 md:py-16">
+      <div className="section-container relative z-10 w-full grid lg:grid-cols-2 gap-8 md:gap-16 items-center py-8 sm:py-12 md:py-16 overflow-hidden">
         {/* Left content */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -103,7 +103,7 @@ const Hero = () => {
         >
           <div className="relative">
             {/* Floating badge top-right */}
-            <div className="absolute -top-5 -right-8 bg-background rounded-xl px-4 py-2.5 shadow-lg text-sm font-semibold text-primary flex items-center gap-2 border border-border/50 animate-float z-10">
+            <div className="hidden md:flex absolute -top-5 -right-8 bg-background rounded-xl px-4 py-2.5 shadow-lg text-sm font-semibold text-primary flex-row items-center gap-2 border border-border/50 animate-float z-10">
               <div className="w-2.5 h-2.5 rounded-full bg-green" />
               Admissions Open 2026
             </div>
@@ -127,7 +127,7 @@ const Hero = () => {
             </div>
 
             {/* Floating badge bottom-left */}
-            <div className="absolute -bottom-4 -left-8 bg-background rounded-xl px-4 py-2.5 shadow-lg text-sm font-semibold text-primary flex items-center gap-2 border border-border/50 animate-float-delayed z-10">
+            <div className="hidden md:flex absolute -bottom-4 -left-8 bg-background rounded-xl px-4 py-2.5 shadow-lg text-sm font-semibold text-primary flex-row items-center gap-2 border border-border/50 animate-float-delayed z-10">
               <MapPin className="w-4 h-4 text-gold" />
               Sai Ssimran City, Raipur
             </div>

@@ -22,7 +22,7 @@ const contactItems = [
     content: "",
     links: [
       { href: "mailto:info@chhattisgarhcoaching.com", label: "info@chhattisgarhcoaching.com" },
-      { href: "mailto:admissions@chhattisgarhcoaching.com", label: "admissions@chhattisgarhcoaching.com" },
+      { href: "mail", label: "" },
     ],
   },
   {
