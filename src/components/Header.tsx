@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
@@ -9,12 +10,15 @@ const navLinks = [
   { label: "Courses", href: "#courses" },
   { label: "Fee Structure", href: "#pricing" },
   { label: "Campus", href: "#campus" },
+  { label: "Gallery", href: "/gallery", isRoute: true },
   { label: "Contact", href: "#contact" },
 ];
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -22,9 +26,13 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleClick = (href: string) => {
+  const handleClick = (href: string, isRoute?: boolean) => {
     setMenuOpen(false);
-    document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (isRoute) {
+      navigate(href);
+    } else {
+      document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   return (
@@ -57,7 +65,7 @@ const Header = () => {
           {navLinks.map((link) => (
             <button
               key={link.href}
-              onClick={() => handleClick(link.href)}
+              onClick={() => handleClick(link.href, link.isRoute)}
               className="text-foreground font-medium text-sm px-3.5 py-2 rounded-lg hover:text-primary hover:bg-primary/5 transition-all"
             >
               {link.label}
@@ -93,7 +101,7 @@ const Header = () => {
               {navLinks.map((link) => (
                 <button
                   key={link.href}
-                  onClick={() => handleClick(link.href)}
+                  onClick={() => handleClick(link.href, link.isRoute)}
                   className="text-foreground font-medium text-lg py-2 px-4 rounded-lg hover:bg-primary/5 transition-colors w-full text-center"
                 >
                   {link.label}
