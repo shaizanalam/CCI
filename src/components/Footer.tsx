@@ -34,7 +34,7 @@ const Footer = () => {
                   Chhattisgarh Coaching Institute
                 </h3>
                 <span className="text-gold text-xs font-medium tracking-wide uppercase">
-                  Art  of making Genius
+                  An Art  of making Genius
                 </span>
               </div>
             </div>

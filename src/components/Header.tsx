@@ -47,7 +47,7 @@ const Header = () => {
               Chhattisgarh Coaching Institute
             </h1>
             <p className="text-xs text-gold font-medium tracking-wide uppercase -mt-0.5">
-              Art  of  making Genius
+              An Art  of  making Genius
             </p>
           </div>
         </a>
