@@ -5,6 +5,7 @@ import Features from "@/components/Features";
 import Courses from "@/components/Courses";
 import Pricing from "@/components/Pricing";
 import Stats from "@/components/Stats";
+import AboutUs from "@/components/AboutUs";
 import Campus from "@/components/Campus";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -18,6 +19,7 @@ const Index = () => (
     <Courses />
     <Pricing />
     <Stats />
+    <AboutUs />
     <Campus />
     <Contact />
     <Footer />
