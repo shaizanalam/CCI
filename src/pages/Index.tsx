@@ -1,6 +1,7 @@
 import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import StudentCarousel from "@/components/StudentCarousel";
 import Features from "@/components/Features";
 import Courses from "@/components/Courses";
 import Pricing from "@/components/Pricing";
@@ -15,6 +16,7 @@ const Index = () => (
     <TopBar />
     <Header />
     <Hero />
+    <StudentCarousel />
     <Features />
     <Courses />
     <Pricing />
