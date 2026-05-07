@@ -156,10 +156,9 @@ const StudentCard = ({
 }) => {
   return (
     <motion.div
-      className="relative bg-background rounded-2xl border border-border/50 shadow-md p-4 min-w-[280px] max-w-[320px]"
+      className="relative bg-background rounded-2xl border border-border/50 p-4 min-w-[280px] max-w-[320px]"
       whileHover={{ 
-        scale: 1.05,
-        boxShadow: "0 10px 30px -15px rgba(0, 0, 0, 0.3)"
+        scale: 1.05
       }}
       transition={{ duration: 0.3, ease: "easeOut" }}
     >

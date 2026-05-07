@@ -178,11 +178,95 @@ const Pricing = () => {
         </div>
 
         <div className="mt-16 bg-primary/[0.03] border border-border rounded-2xl p-8">
-          <p className="text-center text-foreground max-w-2xl mx-auto">
-            <span className="font-semibold">📝 Note:</span> All fees are inclusive of quality instruction,
-            regular assessments, and study materials as mentioned. Additional discounts available for
-            early bird registrations and multiple sibling enrollments. Contact us for more details.
-          </p>
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-primary text-center mb-8">Terms & Conditions</h3>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-4">
+                <div className="bg-background rounded-xl p-4 border border-border/50">
+                  <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
+                    <span className="w-6 h-6 bg-gold/20 rounded-full flex items-center justify-center text-xs font-bold">1</span>
+                    Payment Structure
+                  </h4>
+                  <ul className="text-sm text-muted-foreground space-y-1 ml-8">
+                    <li>• 30-50% advance payment required</li>
+                    <li>• Balance payable in 4 equal installments</li>
+                    <li>• All installments must be completed within 4 months</li>
+                  </ul>
+                </div>
+
+                <div className="bg-background rounded-xl p-4 border border-border/50">
+                  <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
+                    <span className="w-6 h-6 bg-gold/20 rounded-full flex items-center justify-center text-xs font-bold">2</span>
+                    Demo Period
+                  </h4>
+                  <ul className="text-sm text-muted-foreground space-y-1 ml-8">
+                    <li>• 4 days free demo available</li>
+                    <li>• Advance fee must be paid after demo period</li>
+                    <li>• Demo period is non-transferable</li>
+                  </ul>
+                </div>
+
+                <div className="bg-background rounded-xl p-4 border border-border/50">
+                  <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
+                    <span className="w-6 h-6 bg-gold/20 rounded-full flex items-center justify-center text-xs font-bold">3</span>
+                    Refund Policy
+                  </h4>
+                  <ul className="text-sm text-muted-foreground space-y-1 ml-8">
+                    <li>• No refund after 1 month of enrollment</li>
+                    <li>• Seat reservation affects admission limits</li>
+                    <li>• Maximum 24 seats per class only</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="bg-background rounded-xl p-4 border border-border/50">
+                  <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
+                    <span className="w-6 h-6 bg-gold/20 rounded-full flex items-center justify-center text-xs font-bold">4</span>
+                    Early Withdrawal Charges
+                  </h4>
+                  <ul className="text-sm text-muted-foreground space-y-1 ml-8">
+                    <li>• <strong>11th-12th:</strong> ₹5,000 deducted from ₹10,000 advance</li>
+                    <li>• <strong>9th-10th:</strong> ₹4,000 deducted from ₹5,000 advance</li>
+                    <li>• <strong>5th-8th:</strong> ₹3,500 deducted from ₹5,000 advance</li>
+                    <li>• <strong>1st-4th:</strong> ₹3,000 deducted from ₹5,000 advance</li>
+                  </ul>
+                </div>
+
+                <div className="bg-background rounded-xl p-4 border border-border/50">
+                  <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
+                    <span className="w-6 h-6 bg-gold/20 rounded-full flex items-center justify-center text-xs font-bold">5</span>
+                    Policy Changes
+                  </h4>
+                  <ul className="text-sm text-muted-foreground space-y-1 ml-8">
+                    <li>• Management reserves rights to modify policies</li>
+                    <li>• Changes will be communicated in advance</li>
+                    <li>• Existing students protected from sudden changes</li>
+                  </ul>
+                </div>
+
+                <div className="bg-background rounded-xl p-4 border border-border/50">
+                  <h4 className="font-semibold text-primary mb-2 flex items-center gap-2">
+                    <span className="w-6 h-6 bg-gold/20 rounded-full flex items-center justify-center text-xs font-bold">6</span>
+                    Additional Information
+                  </h4>
+                  <ul className="text-sm text-muted-foreground space-y-1 ml-8">
+                    <li>• All fees include study materials & assessments</li>
+                    <li>• Early bird discounts available</li>
+                    <li>• Sibling enrollment benefits offered</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 text-center">
+              <p className="text-xs text-muted-foreground">
+                <strong>Important:</strong> By enrolling, you agree to these terms and conditions. 
+                For any clarifications, please contact our administration office.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
