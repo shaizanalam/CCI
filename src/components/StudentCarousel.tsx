@@ -65,7 +65,7 @@ const studentAchievements = [
   },
   {
     id: 6,
-    name: "Vikash",
+    name: "Vikas",
     percentage: 88,
     maths_marks: 91,
     science_marks: 88,
@@ -285,10 +285,6 @@ const StudentCarousel = () => {
               </div>
             ))}
           </motion.div>
-
-          {/* Gradient Fade Edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-cream to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-cream to-transparent z-10 pointer-events-none" />
         </div>
       </div>
     </section>
