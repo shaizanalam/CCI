@@ -34,6 +34,7 @@ const AboutUs = () => (
                     src={saurabhImage}
                     alt="Er Saurabh Sir"
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
                 {/* Decorative frame */}

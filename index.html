@@ -9,8 +9,16 @@
     <meta name="author" content="Chhattisgarh Coaching Institute" />
     <meta name="theme-color" content="#1a365d" />
 
+    <!-- Preconnect for Google Fonts to reduce DNS lookup time -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts loaded as link tags to prevent FCP delays -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap">
+
     <meta property="og:title" content="Best Coaching in Raipur | Chhattisgarh Coaching Institute">
-    <meta property="og:description" content="Top NEET, JEE & Board coaching institute in Raipur with expert faculty and proven results.">
+    <meta property="og:description" content="Top NEET, JEE & Board coaching Institute in Raipur with expert faculty and proven results.">
     <meta property="og:url" content="https://chhattisgarhcoachinginstitute.com/">
     <meta property="og:type" content="website">
 
@@ -50,6 +58,6 @@
 
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx" defer></script>
   </body>
 </html>

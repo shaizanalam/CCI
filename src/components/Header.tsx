@@ -49,6 +49,7 @@ const Header = () => {
             src={logo}
             alt="Chhattisgarh Coaching Centre Logo"
             className="w-14 h-14 object-contain drop-shadow-md"
+            loading="lazy"
           />
           <div>
             <h1 className="font-heading text-lg sm:text-xl font-bold text-primary leading-tight">

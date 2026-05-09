@@ -31,27 +31,27 @@ const studentAchievements = [
     id: 2,
     name: "Aaliya",
     percentage: 92,
-    maths_marks: 95,
-    science_marks: 90,
-    sst_marks: 91,
+    maths_marks: 94,
+    science_marks: 83,
+    sst_marks: 93,
     image_url: aaliyaImage
   },
   {
     id: 3,
     name: "Mukta",
     percentage: 90,
-    maths_marks: 90,
-    science_marks: 87,
-    sst_marks: 87,
+    maths_marks: 83,
+    science_marks: 93,
+    sst_marks: 94,
     image_url: mukhtaImage
   },
   {
     id: 4,
     name: "Karima",
     percentage: 88,
-    maths_marks: 93,
-    science_marks: 89,
-    sst_marks: 91,
+    maths_marks: 74,
+    science_marks: 81,
+    sst_marks: 93,
     image_url: karimaImage
   },
   {
@@ -67,82 +67,55 @@ const studentAchievements = [
     id: 6,
     name: "Vikas",
     percentage: 88,
-    maths_marks: 91,
-    science_marks: 88,
-    sst_marks: 88,
+    maths_marks: 70,
+    science_marks: 76,
+    sst_marks: 98,
     image_url: vikasImage
   },
   {
     id: 7,
     name: "Kumkum",
     percentage: 85,
-    maths_marks: 95,
-    science_marks: 92,
-    sst_marks: 92,
+    maths_marks: 85,
+    science_marks: 69,
+    sst_marks: 83,
     image_url: kumkumImage
   },
   {
     id: 8,
     name: "Vasu",
     percentage: 85,
-    maths_marks: 92,
-    science_marks: 89,
-    sst_marks: 89,
+    maths_marks: 75,
+    science_marks: 85,
+    sst_marks: 80,
     image_url: vasuImage
   },
   {
     id: 9,
     name: "Ankit",
     percentage: 84,
-    maths_marks: 87,
-    science_marks: 85,
-    sst_marks: 86,
+    maths_marks: 81,
+    science_marks: 70,
+    sst_marks: 90,
     image_url: ankitImage
   },
   {
     id: 10,
     name: "Sanchita",
     percentage: 84,
-    maths_marks: 96,
-    science_marks: 93,
-    sst_marks: 93,
+    maths_marks: 54,
+    science_marks: 75,
+    sst_marks: 80,
     image_url: sanchitaImage
   },
   {
     id: 11,
     name: "Jash",
     percentage: 82,
-    maths_marks: 86,
-    science_marks: 84,
-    sst_marks: 85,
+    maths_marks: 79,
+    science_marks: 78,
+    sst_marks: 70,
     image_url: jashImage
-  },
-  {
-    id: 12,
-    name: "Vanshika",
-    percentage: 76,
-    maths_marks: 94,
-    science_marks: 91,
-    sst_marks: 91,
-    image_url: vanshikaImage
-  },
-  {
-    id: 13,
-    name: "Laksh",
-    percentage: 87,
-    maths_marks: 90,
-    science_marks: 88,
-    sst_marks: 89,
-    image_url: lakshImage
-  },
-  {
-    id: 14,
-    name: "Zoeab",
-    percentage: 91,
-    maths_marks: 93,
-    science_marks: 90,
-    sst_marks: 90,
-    image_url: zoeabImage
   }
 ];
 
@@ -174,6 +147,7 @@ const StudentCard = ({
             src={student.image_url}
             alt={student.name}
             className="w-full h-full object-cover"
+            loading="lazy"
           />
         </div>
         
