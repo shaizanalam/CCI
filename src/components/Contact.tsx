@@ -23,7 +23,10 @@ const contactItems = [
     content: "",
     links: [
       { href: "mailto:info@chhattisgarhcoachinginstitute.com", label: "info@chhattisgarhcoachinginstitute.com" },
-      { href: "mail", label: "" },
+      {
+        href: "mailto:support@chhattisgarhcoachinginstitute.com",
+        label: "support@chhattisgarhcoachinginstitute.com",
+      },
     ],
   },
   {

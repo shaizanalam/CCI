@@ -109,8 +109,13 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="info@chhattisgarhcoachinginstitute.com" className="hover:text-gold transition-colors">
+                <a href="mailto:info@chhattisgarhcoachinginstitute.com" className="hover:text-gold transition-colors">
                   info@chhattisgarhcoachinginstitute.com
+                </a>
+              </li>
+              <li>
+                <a href="mailto:support@chhattisgarhcoachinginstitute.com" className="hover:text-gold transition-colors">
+                  support@chhattisgarhcoachinginstitute.com
                 </a>
               </li>
               <li>Mon–Sat: 8AM–8PM</li>
