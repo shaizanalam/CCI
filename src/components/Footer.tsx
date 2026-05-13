@@ -1,4 +1,5 @@
 import logo from "@/assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const scrollTo = (id: string) => {
@@ -118,6 +119,15 @@ const Footer = () => {
         </div>
 
         <div className="text-center py-5 text-primary-foreground/30 text-xs">
+          <div className="mb-2 flex items-center justify-center gap-4 text-primary-foreground/60">
+            <Link to="/privacy" className="hover:text-gold transition-colors">
+              Privacy Policy
+            </Link>
+            <span>|</span>
+            <Link to="/terms" className="hover:text-gold transition-colors">
+              Terms &amp; Conditions
+            </Link>
+          </div>
           © 2026 Chhattisgarh Coaching Institute. All Rights Reserved. | Powered by Shaizan Alam
         </div>
       </div>

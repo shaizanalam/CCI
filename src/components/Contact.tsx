@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { useState, FormEvent, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { toast } from "sonner";
 
 const contactItems = [
@@ -34,6 +35,7 @@ const contactItems = [
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", phone: "", email: "", course: "", message: "" });
+  const [hasConsent, setHasConsent] = useState(false);
 
   useEffect(() => {
     const selectedCourse = sessionStorage.getItem("selectedCourse");
@@ -45,6 +47,10 @@ const Contact = () => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+    if (!hasConsent) {
+      toast.error("Please agree to the Privacy Policy and Terms & Conditions to continue.");
+      return;
+    }
 
     const whatsappNumber = "919131860077"; // your WhatsApp number
     const whatsappMessage = `New Inquiry:\nName: ${form.name || "-"}\nPhone: ${form.phone || "-"}\nEmail: ${form.email || "-"}\nCourse: ${form.course || "-"}\nMessage: ${form.message || "-"}`;
@@ -56,6 +62,7 @@ const Contact = () => {
     }
 
     setForm({ name: "", phone: "", email: "", course: "", message: "" });
+    setHasConsent(false);
   };
 
   const inputClass =
@@ -238,9 +245,32 @@ const Contact = () => {
                 />
               </div>
 
+              <div className="rounded-xl border border-primary-foreground/15 bg-primary-foreground/[0.04] p-3 sm:p-4">
+                <label className="flex items-start gap-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={hasConsent}
+                    onChange={(e) => setHasConsent(e.target.checked)}
+                    className="mt-0.5 h-4 w-4 rounded border-primary-foreground/35 bg-primary-foreground/[0.08] text-[#2dd4bf] accent-[#2dd4bf] focus:ring-2 focus:ring-[#2dd4bf]/50"
+                  />
+                  <span className="text-[11px] leading-relaxed text-gray-400 sm:text-xs">
+                    By submitting the form, I agree to the{" "}
+                    <Link to="/privacy" className="font-medium text-[#2dd4bf] hover:text-[#5eead4] transition-colors">
+                      Privacy Policy
+                    </Link>{" "}
+                    and{" "}
+                    <Link to="/terms" className="font-medium text-[#2dd4bf] hover:text-[#5eead4] transition-colors">
+                      Terms &amp; Conditions
+                    </Link>{" "}
+                    of Chhattisgarh Coaching Institute.
+                  </span>
+                </label>
+              </div>
+
               <button
                 type="submit"
-                className="w-full bg-gold text-primary-foreground py-4 rounded-full font-bold text-base tracking-wide hover:bg-gold-light hover:-translate-y-0.5 transition-all duration-300 shadow-md"
+                disabled={!hasConsent}
+                className="w-full bg-gold text-primary-foreground py-4 rounded-full font-bold text-base tracking-wide transition-all duration-300 shadow-md enabled:hover:bg-gold-light enabled:hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
               >
                 Send Message ✉
               </button>
