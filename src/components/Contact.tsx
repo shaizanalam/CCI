@@ -21,7 +21,7 @@ const contactItems = [
     title: "Email Address",
     content: "",
     links: [
-      { href: "mailto:info@chhattisgarhcoaching.com", label: "info@chhattisgarhcoaching.com" },
+      { href: "mailto:info@chhattisgarhcoachinginstitute.com", label: "info@chhattisgarhcoachinginstitute.com" },
       { href: "mail", label: "" },
     ],
   },

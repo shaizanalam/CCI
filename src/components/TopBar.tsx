@@ -18,9 +18,9 @@ const TopBar = () => (
           <Phone className="w-3.5 h-3.5 text-gold" />
           +91 91318 60077
         </a>
-        <a href="mailto:info@chhattisgarhcoaching.com" className="flex items-center gap-1.5 hover:text-gold-light transition-colors">
+        <a href="mailto:info@chhattisgarhcoachinginstitute.com" className="flex items-center gap-1.5 hover:text-gold-light transition-colors">
           <Mail className="w-3.5 h-3.5 text-gold" />
-          info@chhattisgarhcoaching.com
+          info@chhattisgarhcoachinginstitute.com
         </a>
       </div>
     </div>

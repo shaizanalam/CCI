@@ -115,6 +115,7 @@ const studentAchievements = [
     maths_marks: 79,
     science_marks: 78,
     sst_marks: 70,
+    
     image_url: jashImage
   }
 ];

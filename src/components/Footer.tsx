@@ -108,8 +108,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="mailto:info@chhattisgarhcoaching.com" className="hover:text-gold transition-colors">
-                  info@chhattisgarhcoaching.com
+                <a href="info@chhattisgarhcoachinginstitute.com" className="hover:text-gold transition-colors">
+                  info@chhattisgarhcoachinginstitute.com
                 </a>
               </li>
               <li>Mon–Sat: 8AM–8PM</li>
@@ -118,7 +118,7 @@ const Footer = () => {
         </div>
 
         <div className="text-center py-5 text-primary-foreground/30 text-xs">
-          © 2026 Chhattisgarh Coaching Centre. All Rights Reserved. | Powered by Shaizan Alam
+          © 2026 Chhattisgarh Coaching Institute. All Rights Reserved. | Powered by Shaizan Alam
         </div>
       </div>
     </footer>
