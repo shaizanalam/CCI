@@ -21,7 +21,7 @@ const pricingPlans = [
       },
       {
         title: "Class 9th",
-        price: "₹18,000",
+        price: "₹20,000",
         period: "Per Year",
         features: ["Maths & Science", "Study Materials", "T-Shirt Included", "Board Exam Prep"],
         popular: false,
@@ -46,7 +46,7 @@ const pricingPlans = [
     plans: [
       {
         title: "Single Subject",
-        price: "₹15,000",
+        price: "₹19,000",
         period: "Per Year",
         features: ["One Subject Focused", "In-Depth Coaching", "Regular Test Series"],
         popular: false,
