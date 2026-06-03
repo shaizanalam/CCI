@@ -53,14 +53,14 @@ const pricingPlans = [
       },
       {
         title: "Double Subject",
-        price: "₹28,000 - ₹30,000",
+        price: "₹29,000 - ₹30,000",
         period: "Per Year",
         features: ["Two Subjects", "Competitive Exam Prep", "Mock Tests Included"],
         popular: false,
       },
       {
         title: "Triple Subject (PCM/PCB)",
-        price: "₹38,000 - ₹45,000",
+        price: "₹39,000 - ₹45,000",
         period: "Per Year",
         features: [
           "Physics, Chemistry, Maths/Biology",
@@ -77,7 +77,7 @@ const pricingPlans = [
     plans: [
       {
         title: "Commerce Stream",
-        price: "₹28,000 - ₹36,000",
+        price: "₹29,000 - ₹36,000",
         period: "Per Year",
         features: [
           "Accountancy",
