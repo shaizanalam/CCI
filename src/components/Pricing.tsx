@@ -21,7 +21,7 @@ const pricingPlans = [
       },
       {
         title: "Class 9th",
-        price: "₹18,000",
+        price: "₹20,000",
         period: "Per Year",
         features: ["Maths & Science", "Study Materials", "T-Shirt Included", "Board Exam Prep"],
         popular: false,
@@ -46,21 +46,21 @@ const pricingPlans = [
     plans: [
       {
         title: "Single Subject",
-        price: "₹15,000",
+        price: "₹19,000",
         period: "Per Year",
         features: ["One Subject Focused", "In-Depth Coaching", "Regular Test Series"],
         popular: false,
       },
       {
         title: "Double Subject",
-        price: "₹28,000 - ₹30,000",
+        price: "₹29,000 - ₹30,000",
         period: "Per Year",
         features: ["Two Subjects", "Competitive Exam Prep", "Mock Tests Included"],
         popular: false,
       },
       {
         title: "Triple Subject (PCM/PCB)",
-        price: "₹38,000 - ₹45,000",
+        price: "₹39,000 - ₹45,000",
         period: "Per Year",
         features: [
           "Physics, Chemistry, Maths/Biology",
@@ -77,7 +77,7 @@ const pricingPlans = [
     plans: [
       {
         title: "Commerce Stream",
-        price: "₹28,000 - ₹36,000",
+        price: "₹29,000 - ₹36,000",
         period: "Per Year",
         features: [
           "Accountancy",
