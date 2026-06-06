@@ -339,7 +339,7 @@ const StudentCarouselSection = ({
         >
           <div className="section-tag">{tag}</div>
           <h2 className="section-title">{title}</h2>
-          <p className="section-sub text-center mx-auto w-full max-w-3xl">
+          <p className="text-muted-foreground text-base sm:text-lg text-center mx-auto w-full max-w-3xl leading-relaxed mb-10">
             {subtitle}
           </p>
         </motion.div>
