@@ -127,6 +127,15 @@ const class10Students = [
     sst_marks: 70,
     image_url: jashImage
   }
+  {
+    id: 12,
+    name: "Arsalan",
+    percentage: 58.4,
+    maths_marks: 37,
+    science_marks: 33,
+    sst_marks: 52,
+    image_url: Ashland.jpeg
+  }
 ];
 
 // Class 12th Student data with achievements
