@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Trophy, Star, Award } from "lucide-react";
 import saraImage from "@/assets/sara.jpeg";
@@ -322,6 +322,8 @@ const StudentCarouselSection = ({
 }) => {
   const [isPaused, setIsPaused] = useState(false);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   // Duplicate array for seamless loop
   const duplicatedStudents = [...students, ...students];
@@ -346,18 +348,24 @@ const StudentCarouselSection = ({
 
         {/* Infinite Scroll Container */}
         <div 
-          className="relative"
+          className="relative cursor-grab active:cursor-grabbing"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
+          onMouseDown={() => setIsDragging(true)}
+          onMouseUp={() => setIsDragging(false)}
         >
           <motion.div
+            ref={carouselRef}
             className="flex gap-6"
+            drag="x"
+            dragConstraints={{ left: -duplicatedStudents.length * 312 + 312, right: 0 }}
+            dragElastic={0.1}
             animate={{
-              x: isPaused ? 0 : [0, -duplicatedStudents.length * 312], // 312px = card width + gap
+              x: isPaused || isDragging ? 0 : [0, -duplicatedStudents.length * 312], // 312px = card width + gap
             }}
             transition={{
               x: {
-                repeat: Infinity,
+                repeat: !isPaused && !isDragging ? Infinity : 0,
                 duration: duplicatedStudents.length * 3, // 3 seconds per card
                 ease: "linear",
               },
