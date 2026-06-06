@@ -15,9 +15,19 @@ import jashImage from "@/assets/jash.jpeg";
 import vanshikaImage from "@/assets/vanshika.jpeg";
 import lakshImage from "@/assets/laksh.jpeg";
 import zoeabImage from "@/assets/zoeab.jpeg";
+import aasthaImage from "@/assets/Aastha.jpeg";
+import sakshiImage from "@/assets/Sakshi.jpeg";
+import prakharImage from "@/assets/Prakhar.jpeg";
+import ajiteshImage from "@/assets/Ajiitesh.jpeg";
+import anasImage from "@/assets/Anas.jpeg";
+import meghaImage from "@/assets/Megha.jpeg";
+import faizaImage from "@/assets/Faiza.jpeg";
+import ayushImage from "@/assets/Ayush.jpeg";
+import ayaanImage from "@/assets/Ayan.jpeg";
+import wazirImage from "@/assets/Wazir.jpeg";
 
-// Student data with achievements
-const studentAchievements = [
+// Class 10th Student data with achievements
+const class10Students = [
   {
     id: 1,
     name: "Sara Shireen",
@@ -115,18 +125,113 @@ const studentAchievements = [
     maths_marks: 79,
     science_marks: 78,
     sst_marks: 70,
-    
     image_url: jashImage
+  }
+];
+
+// Class 12th Student data with achievements
+const class12Students = [
+  {
+    id: 13,
+    name: "Sakshi",
+    percentage: 87,
+    maths_marks: 86,
+    science_marks: 87,
+    sst_marks: 88,
+    image_url: sakshiImage
+  },
+  {
+    id: 12,
+    name: "Aastha",
+    percentage: 87,
+    maths_marks: 85,
+    science_marks: 88,
+    sst_marks: 88,
+    image_url: aasthaImage
+  },
+  {
+    id: 17,
+    name: "Megha",
+    percentage: 85,
+    maths_marks: 84,
+    science_marks: 86,
+    sst_marks: 85,
+    image_url: meghaImage
+  },
+  {
+    id: 21,
+    name: "Wazir",
+    percentage: 82,
+    maths_marks: 81,
+    science_marks: 83,
+    sst_marks: 82,
+    image_url: wazirImage
+  },
+  {
+    id: 14,
+    name: "Prakhar",
+    percentage: 81,
+    maths_marks: 80,
+    science_marks: 82,
+    sst_marks: 81,
+    image_url: prakharImage
+  },
+  {
+    id: 15,
+    name: "Ajitesh",
+    percentage: 80,
+    maths_marks: 79,
+    science_marks: 81,
+    sst_marks: 80,
+    image_url: ajiteshImage
+  },
+  {
+    id: 18,
+    name: "Faiza",
+    percentage: 80,
+    maths_marks: 79,
+    science_marks: 81,
+    sst_marks: 80,
+    image_url: faizaImage
+  },
+  {
+    id: 16,
+    name: "Anas",
+    percentage: 78,
+    maths_marks: 77,
+    science_marks: 79,
+    sst_marks: 78,
+    image_url: anasImage
+  },
+  {
+    id: 19,
+    name: "Ayush",
+    percentage: 78,
+    maths_marks: 77,
+    science_marks: 79,
+    sst_marks: 78,
+    image_url: ayushImage
+  },
+  {
+    id: 20,
+    name: "Ayaan",
+    percentage: 72,
+    maths_marks: 70,
+    science_marks: 73,
+    sst_marks: 73,
+    image_url: ayaanImage
   }
 ];
 
 // Individual Student Card Component
 const StudentCard = ({ 
   student, 
-  isHovered 
+  isHovered,
+  showSubjectMarks = true
 }: { 
-  student: typeof studentAchievements[0]; 
+  student: typeof class10Students[0]; 
   isHovered: boolean;
+  showSubjectMarks?: boolean;
 }) => {
   return (
     <motion.div
@@ -180,31 +285,46 @@ const StudentCard = ({
         </div>
 
         {/* Subject Marks Grid */}
-        <div className="grid grid-cols-3 gap-2 text-xs">
-          <div className="bg-primary/5 rounded-lg p-2 text-center">
-            <div className="font-semibold text-primary">Maths</div>
-            <div className="text-muted-foreground">{student.maths_marks}</div>
+        {showSubjectMarks && (
+          <div className="grid grid-cols-3 gap-2 text-xs">
+            <div className="bg-primary/5 rounded-lg p-2 text-center">
+              <div className="font-semibold text-primary">Maths</div>
+              <div className="text-muted-foreground">{student.maths_marks}</div>
+            </div>
+            <div className="bg-primary/5 rounded-lg p-2 text-center">
+              <div className="font-semibold text-primary">Science</div>
+              <div className="text-muted-foreground">{student.science_marks}</div>
+            </div>
+            <div className="bg-primary/5 rounded-lg p-2 text-center">
+              <div className="font-semibold text-primary">SST</div>
+              <div className="text-muted-foreground">{student.sst_marks}</div>
+            </div>
           </div>
-          <div className="bg-primary/5 rounded-lg p-2 text-center">
-            <div className="font-semibold text-primary">Science</div>
-            <div className="text-muted-foreground">{student.science_marks}</div>
-          </div>
-          <div className="bg-primary/5 rounded-lg p-2 text-center">
-            <div className="font-semibold text-primary">SST</div>
-            <div className="text-muted-foreground">{student.sst_marks}</div>
-          </div>
-        </div>
+        )}
       </div>
     </motion.div>
   );
 };
 
-const StudentCarousel = () => {
+// Reusable Carousel Component
+const StudentCarouselSection = ({
+  students,
+  title,
+  subtitle,
+  tag,
+  showSubjectMarks = true
+}: {
+  students: typeof class10Students;
+  title: string;
+  subtitle: string;
+  tag: string;
+  showSubjectMarks?: boolean;
+}) => {
   const [isPaused, setIsPaused] = useState(false);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   // Duplicate array for seamless loop
-  const duplicatedStudents = [...studentAchievements, ...studentAchievements];
+  const duplicatedStudents = [...students, ...students];
 
   return (
     <section className="py-12 sm:py-16 bg-cream overflow-hidden">
@@ -217,10 +337,10 @@ const StudentCarousel = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="section-tag">Achievements</div>
-          <h2 className="section-title">Student Stars</h2>
+          <div className="section-tag">{tag}</div>
+          <h2 className="section-title">{title}</h2>
           <p className="section-sub">
-            Celebrating the outstanding academic achievements of our brilliant students
+            {subtitle}
           </p>
         </motion.div>
 
@@ -256,6 +376,7 @@ const StudentCarousel = () => {
                 <StudentCard 
                   student={student} 
                   isHovered={hoveredCard === student.percentage}
+                  showSubjectMarks={showSubjectMarks}
                 />
               </div>
             ))}
@@ -263,6 +384,30 @@ const StudentCarousel = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+const StudentCarousel = () => {
+  return (
+    <>
+      {/* Class 10th Results */}
+      <StudentCarouselSection
+        students={class10Students}
+        tag="Class 10th Results"
+        title="Class 10th Stars"
+        subtitle="Celebrating the outstanding academic achievements of our Class 10th students"
+        showSubjectMarks={true}
+      />
+      
+      {/* Class 12th Results */}
+      <StudentCarouselSection
+        students={class12Students}
+        tag="Class 12th Results"
+        title="Class 12th Stars"
+        subtitle="Celebrating the outstanding academic achievements of our Class 12th students"
+        showSubjectMarks={false}
+      />
+    </>
   );
 };
 
