@@ -14,6 +14,7 @@ const PrivacyPolicy = () => {
           name="description"
           content="Read the privacy policy of Chhattisgarh Coaching Institute."
         />
+        <link rel="canonical" href="https://chhattisgarhcoachinginstitute.com/privacy" />
       </Helmet>
 
       <TopBar />
@@ -34,7 +35,7 @@ const PrivacyPolicy = () => {
 
             <header className="mb-10 border-b border-border/70 pb-6">
               <h1 className="font-heading text-3xl font-bold text-foreground sm:text-4xl">
-                Privacy Policy
+                Privacy Policy - Best Coaching Institute in Raipur
               </h1>
               <p className="mt-3 text-sm text-muted-foreground">
                 Last updated: May 13, 2026

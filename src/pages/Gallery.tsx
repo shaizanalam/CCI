@@ -12,9 +12,11 @@ const Gallery = () => {
         <title>Gallery - Chhattisgarh Coaching Institute | Campus Photos & Events</title>
         <meta name="description" content="Explore our campus, classrooms, events, and student activities at Chhattisgarh Coaching Institute. See our modern facilities and learning environment." />
         <meta name="keywords" content="CCI gallery, coaching institute campus, Raipur coaching photos, classroom photos, education events" />
+        <link rel="canonical" href="https://chhattisgarhcoachinginstitute.com/gallery" />
         <meta property="og:title" content="Gallery - Chhattisgarh Coaching Institute" />
         <meta property="og:description" content="Explore our campus, classrooms, events, and student activities" />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://chhattisgarhcoachinginstitute.com/gallery" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Gallery - Chhattisgarh Coaching Institute" />
         <meta name="twitter:description" content="Explore our campus, classrooms, events, and student activities" />
@@ -46,7 +48,7 @@ const Gallery = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
             >
               <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-black text-primary-foreground mb-6">
-                Gallery
+                Campus Gallery - Best Educational Institute in Raipur
               </h1>
               <p className="text-lg sm:text-xl text-primary-foreground/80 max-w-2xl mx-auto">
                 Explore our vibrant campus life, modern facilities, and the journey of excellence at Chhattisgarh Coaching Institute

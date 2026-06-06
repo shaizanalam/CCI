@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import TopBar from "@/components/TopBar";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -13,6 +14,11 @@ import Footer from "@/components/Footer";
 
 const Index = () => (
   <>
+    <Helmet>
+      <title>Chhattisgarh Coaching Institute | Best Coaching in Raipur for NEET, JEE & Boards</title>
+      <meta name="description" content="Chhattisgarh Coaching Institute (CCI) is the best coaching in Raipur for NEET, JEE, and Class 10 & 12 Boards. Expert teachers, proven results, and top study material. Join now." />
+      <link rel="canonical" href="https://chhattisgarhcoachinginstitute.com/" />
+    </Helmet>
     <TopBar />
     <Header />
     <Hero />

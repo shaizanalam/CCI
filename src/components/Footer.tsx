@@ -43,15 +43,38 @@ const Footer = () => {
               Providing quality education and coaching services in Raipur, Chhattisgarh. Committed to helping students achieve their academic goals.
             </p>
             <div className="flex gap-2.5">
-              {["facebook", "instagram", "youtube", "whatsapp"].map((social) => (
-                <a
-                  key={social}
-                  href="#"
-                  className="w-9 h-9 rounded-lg bg-primary-foreground/[0.08] border border-primary-foreground/10 flex items-center justify-center text-primary-foreground/70 text-xs hover:bg-gold hover:border-gold hover:text-primary-foreground transition-all"
-                >
-                  {social[0].toUpperCase()}
-                </a>
-              ))}
+              <a
+                href="https://facebook.com/chhattisgarhcoachinginstitute"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-primary-foreground/[0.08] border border-primary-foreground/10 flex items-center justify-center text-primary-foreground/70 text-xs hover:bg-gold hover:border-gold hover:text-primary-foreground transition-all"
+              >
+                F
+              </a>
+              <a
+                href="https://instagram.com/chhattisgarhcoachinginstitute"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-primary-foreground/[0.08] border border-primary-foreground/10 flex items-center justify-center text-primary-foreground/70 text-xs hover:bg-gold hover:border-gold hover:text-primary-foreground transition-all"
+              >
+                I
+              </a>
+              <a
+                href="https://youtube.com/@chhattisgarhcoachinginstitute"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-primary-foreground/[0.08] border border-primary-foreground/10 flex items-center justify-center text-primary-foreground/70 text-xs hover:bg-gold hover:border-gold hover:text-primary-foreground transition-all"
+              >
+                Y
+              </a>
+              <a
+                href="https://wa.me/919131860077"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-primary-foreground/[0.08] border border-primary-foreground/10 flex items-center justify-center text-primary-foreground/70 text-xs hover:bg-gold hover:border-gold hover:text-primary-foreground transition-all"
+              >
+                W
+              </a>
             </div>
           </div>
 

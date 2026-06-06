@@ -1,0 +1,40 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/#features",
+      "destination": "/#features",
+      "permanent": true
+    },
+    {
+      "source": "/#courses",
+      "destination": "/#courses",
+      "permanent": true
+    },
+    {
+      "source": "/#pricing",
+      "destination": "/#pricing",
+      "permanent": true
+    },
+    {
+      "source": "/#stats",
+      "destination": "/#stats",
+      "permanent": true
+    },
+    {
+      "source": "/#campus",
+      "destination": "/#campus",
+      "permanent": true
+    },
+    {
+      "source": "/#contact",
+      "destination": "/#contact",
+      "permanent": true
+    }
+  ]
+}

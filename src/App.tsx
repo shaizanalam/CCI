@@ -10,6 +10,9 @@ import NotFound from "./pages/NotFound.tsx";
 import WhatsAppButton from "./components/WhatsAppButton.tsx";
 import PrivacyPolicy from "./components/pages/PrivacyPolicy.tsx";
 import TermsAndConditions from "./components/pages/TermsAndConditions.tsx";
+import PrimarySchool from "./pages/courses/PrimarySchool.tsx";
+import MiddleHighSchool from "./pages/courses/MiddleHighSchool.tsx";
+import JeeNeetXIXII from "./pages/courses/JeeNeetXIXII.tsx";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +29,9 @@ const App = () => (
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsAndConditions />} />
+            <Route path="/courses/primary-school" element={<PrimarySchool />} />
+            <Route path="/courses/middle-high-school" element={<MiddleHighSchool />} />
+            <Route path="/courses/jee-neet-xi-xii" element={<JeeNeetXIXII />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
