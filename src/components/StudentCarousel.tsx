@@ -134,7 +134,7 @@ const class10Students = [
     maths_marks: 37,
     science_marks: 33,
     sst_marks: 52,
-    image_url: Ashland.jpeg
+    image_url: 
   }
 ];
 
