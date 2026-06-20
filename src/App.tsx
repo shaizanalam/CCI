@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import Gallery from "./pages/Gallery.tsx";
+import AppDownload from "./pages/AppDownload.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import WhatsAppButton from "./components/WhatsAppButton.tsx";
 import PrivacyPolicy from "./components/pages/PrivacyPolicy.tsx";
@@ -27,6 +28,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/download-app" element={<AppDownload />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsAndConditions />} />
             <Route path="/courses/primary-school" element={<PrimarySchool />} />

@@ -11,6 +11,7 @@ const navLinks = [
   { label: "Fee Structure", href: "#pricing" },
   { label: "Campus", href: "#campus" },
   { label: "Gallery", href: "/gallery", isRoute: true },
+  { label: "Download App", href: "/download-app", isRoute: true },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -31,7 +32,16 @@ const Header = () => {
     if (isRoute) {
       navigate(href);
     } else {
-      document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      // If we're not on the home page, navigate to home first
+      if (location.pathname !== "/") {
+        navigate("/");
+        // Scroll to section after navigation
+        setTimeout(() => {
+          document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100);
+      } else {
+        document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
   };
 
