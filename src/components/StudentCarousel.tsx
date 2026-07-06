@@ -5,7 +5,7 @@ import saraImage from "@/assets/sara.jpeg";
 import aaliyaImage from "@/assets/aaliya.jpeg";
 import mukhtaImage from "@/assets/mukhta.jpeg";
 import karimaImage from "@/assets/karima.jpeg";
-import shaizanImage from "@/assets/shaizan.jpeg";
+import shaizan from "@/assets/shaizan.jpeg";
 import vikasImage from "@/assets/vikas.jpeg";
 import kumkumImage from "@/assets/kumkum.jpeg";
 import vasuImage from "@/assets/vasu.jpeg";
